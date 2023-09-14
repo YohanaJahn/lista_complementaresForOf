@@ -7,11 +7,19 @@
     */
 
     //Entrada
-
-
+    const notasAluno = [7, 5, 9, 8];
+    let menorNota = notasAluno.sort()[0];
+    let maiorNota = notasAluno.reverse()[0];
+    let soma = 0
+    
     //Processamento
-
+    for(let nota of notasAluno){
+        soma += nota
+    }
+    let media = soma / notasAluno.length;
 
     //Saída
+    alert(`Sua maior nota foi: ${maiorNota}\nMenor nota é: ${menorNota}\nSua média ficou de: ${media.replace(".", ",")}`);
+
 
 </script>

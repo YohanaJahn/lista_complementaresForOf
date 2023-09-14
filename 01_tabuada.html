@@ -7,11 +7,17 @@
     */
 
     //Entrada
-
+    const tabuada = prompt("Insira qual número deseja calcular a tabuada:")
+    let multiplicador = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    let final = []
 
     //Processamento
-
+    for(let item of multiplicador){
+        const resultado = tabuada * item;
+        final.push(resultado);
+    }
 
     //Saída
+    alert(`Os resultados são: ${final.join()}.`); 
     
 </script>

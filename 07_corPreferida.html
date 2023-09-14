@@ -8,11 +8,18 @@
     */
 
     //Entrada
-
+    let cores = ["Branco", "Azul", "Marrom", "Cinza", "Verde", "Amarelo", "Vermelho", "Preto"];
+    let coresGosto = [];
 
     //Processamento
-
+    for(let cor of cores){
+        let gostar = prompt(`Você gosta da cor ${cor}?S/n`).trim().toUpperCase();
+        if(gostar == "S"){
+            coresGosto.push(cor)
+        }
+    }
 
     //Saída
+    alert(`As cores que você prefere são: ${coresGosto.join(", ")}.\nVocê gosta de ${coresGosto.length} cores entre essas.`);
 
 </script>

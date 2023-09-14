@@ -6,11 +6,21 @@
     */
 
     //Entrada
-
+    const palavra = prompt("Digite uma palavra, que não possua aventuação.").toLowerCase().trim();
+    let vogais = ['a','e','i','o','u'];
+    let totalVogal = 0
+    let totalConsoantes = 0
 
     //Processamento
-
+    for (let letra of palavra) {
+        if (vogais.indexOf(letra) != -1) {
+            totalVogal += 1;
+        }
+        else {
+            totalConsoantes += 1
+        }
+    }
 
     //Saída
-
+    alert(`A palavra ${palavra} possui ${totalVogal} vogais e ${totalConsoantes} consoantes.`)
 </script>

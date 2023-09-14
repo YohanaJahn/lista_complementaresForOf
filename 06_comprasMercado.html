@@ -7,11 +7,16 @@
     */
 
     //Entrada
-
+    let lista = ["A", "E", 2, 4.8, "CINQUENTA", "Araquari", 80, 10, 3.2];
+    let soma = 0
 
     //Processamento
-
+    for (let item of lista) {
+        if(!isNaN(item)){
+            soma += item
+        }
+    }
 
     //Saída
-
+    alert(`O resultado será: ${soma.toFixed(1).replace(".",",")}.`)
 </script>

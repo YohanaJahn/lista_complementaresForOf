@@ -8,11 +8,15 @@
     */
 
     //Entrada
-
+    let nomes = ["Hilário", "Rafaela", "José", "Bárbara", "Fábio", "Júlia"];
+    let acento = []
 
     //Processamento
-
+    for (let item of nomes) {
+        acento.push(item.replace("á", "a").replace("é", "e").replace("í", "i").replace("ó", "o").replace("ú", "u"));
+    }
 
     //Saída
+    alert(`Esssa é lista sem correção: "Hilário", "Rafaela", "José", "Bárbara", "Fábio", "Júlia" \nEssa é a lista corrigida: ${acento.join(", ")}.`)
 
 </script>

@@ -8,10 +8,31 @@
     */
 
     //Entrada
-
+    let cidades = ["Porto Alegre", "Curitiba", "Florianópolis", "Joinville", "Blumenau", "Gramado", "Santa Maria", "Londrina", "Itajaí"];
+    let RS = [];
+    let SC = [];
+    let PR = [];
 
     //Processamento
+    for (let cidade of cidades) {
+        const estados = prompt(`Qual estado essa cidade pertence: ${cidade}, Responda SC-Santa Catarina, RS-Rio Grande do Sul e PR-Paraná.`).toUpperCase();
+        if (estados == "SC") {
+            SC.push(cidade); 
+        }
+        else if (estados == "RS") {
+            RS.push(cidade);
+        }
+        else {
+            PR.push(cidade);
+        }
+    }
+    let mensagemF = [
+        ["Os estados de Santa Catarina são:", SC.join(" - ")],
+        ["\nOs estados do Paraná são:", PR.join(" - ")],
+        ["\nOs estados de Rio Grande do Sul são:", RS.join(" - ")]
+    ];
 
+    alert(`${mensagemF.sort((a, b) => b[1].length - a[1].length)}`);
 
     //Saída
 
